@@ -204,7 +204,7 @@ function nine() {
         else if (ladoA == ladoB || ladoA == ladoC || ladoB == ladoC) {
             alert("isóceles");
         }
-        else if (ladoA != ladoB && ladoC != ladoB){
+        else if (ladoA != ladoB && ladoC != ladoB) {
             alert("é escaleno")
         }
 
@@ -214,19 +214,116 @@ function nine() {
     }
 
 }
-function ten(){
+function ten() {
     let usuario = prompt("usuario?");
     let senha = prompt("qual senha");
 
-    if(usuario == "admin" && senha == 1234){
+    if (usuario == "admin" && senha == 1234) {
         alert("acesso permitido");
     }
-    else{
-        if(usuario == "admin" && senha != 1234){
+    else {
+        if (usuario == "admin" && senha != 1234) {
             alert("senha incorreta");
         }
-        else{
+        else {
             alert("usuario errado");
         }
+    }
+}
+function eleven() {
+    let valorcompra = Number(prompt("qual o valor da compra?"));
+
+    if (valorcompra <= 100) {
+        alert(" valor pagar=" + valorcompra + " (0% de desconconto)");
+    }
+    else if (valorcompra > 100 && valorcompra <= 500) {
+        let valordesconto = valorcompra * 10 / 100;
+        let valorpagar = valorcompra - valordesconto;
+        alert("valor desconto=" + valordesconto + " valor pagar=" + valorpagar + " (10% de desconconto)");
+    }
+    else if (valorcompra > 500) {
+        let valordesconto = valorcompra * 20 / 100;
+        let valorpagar = valorcompra - valordesconto;
+        alert("valor desconto=" + valordesconto + " valor pagar=" + valorpagar + " (20% de desconconto)");
+    }
+}
+function twelve() {
+    let numero = Number(prompt("um numero inteiro?"))
+    let numeroresto = numero % 2;
+    if (numero > 0) {
+        alert("positivo")
+    }
+    else if (numero < 0) {
+        alert("negativo")
+    }
+    else if (numero == 0) {
+        alert("zero")
+    }
+
+    if (numeroresto == 0) {
+        alert("par")
+    }
+    else {
+        alert("ímpar")
+    }
+}
+function thirteen() {
+    let idade = Number(prompt("qual a sua idade"));
+
+    if (idade >= 0) {
+        if (idade < 16) {
+            alert("nao vota")
+        }
+        else if (idade >= 16 & idade <= 17) {
+            alert("voto facultativo");
+        }
+        else if (idade >= 18 & idade < 70) {
+            alert("voto obrigatorio");
+        }
+        else if (idade >= 70) {
+            alert("voto facultativo");
+        }
+    }
+    else{
+        alert("idade negativa")
+    }
+}
+function fourteen(){
+    let temperatura = Number(prompt("qual o valor da temperatura?"));
+    let unidade = prompt("qual a unidade de medida da temperatura (C ou F)");
+
+    let paraFahrenheit = (temperatura*9/5)+32;
+    let paraCelsius = (temperatura-32)*5/9;
+    if(unidade="C"){
+        alert(temperatura+" °C="+paraFahrenheit+"°F");
+    }
+    else if(unidade="F"){
+        alert(temperatura+" °F="+paraCelsius+"°C");
+    }
+    else{
+        alert("erro");
+    }
+}
+function fifteen(){
+     let valorvendido = Number(prompt("qual o valor vendido"));
+
+     if(valorvendido<=2000){
+        alert("comissao="+valorvendido+" valor total "+((valorvendido*5/100)+valorvendido)+" (5%)")
+     }
+     else if(valorvendido>2000 & valorvendido<= 5000){
+        alert("comissao="+valorvendido+" valor total "+((valorvendido*10/100)+valorvendido)+" (10%)")
+     }
+     else if(valorvendido>5000){
+        alert("comissao="+valorvendido+" valor total "+((valorvendido*15/100)+valorvendido)+" (15%)")
+     }
+}
+function sixteen(){
+    let numero = Number(prompt("qual numero?"));
+
+    if(numero>0 && numero <100){
+        alert("dentro da caixa");
+    }
+    else{
+        alert("fora da caixa");
     }
 }
